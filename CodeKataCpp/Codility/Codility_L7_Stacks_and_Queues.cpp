@@ -3,129 +3,140 @@
 #include <stack>
 #include <string>
 #include <vector>
-using namespace std;
+#include <algorithm>
 
 // EASY
 // Brackets
 // Determine whether a given string of parentheses(multiple types) is properly nested.
-int brackets_solution(string& S) {
+int brackets_solution(std::string& S) {
 
-    if (S.length() == 0) return 1;
-    if (S.length() % 2 != 0) return 0;
+	if (S.length() == 0) return 1;
+	if (S.length() % 2 != 0) return 0;
 
-    stack<char> x;
+	std::stack<char> x;
 
-    for (size_t i = 0; i < S.length(); ++i)
-    {
-        switch (S[i]) {
-        case ')':
-            if (x.empty()) return 0;
-            if (x.top() != '(') return 0;
-            x.pop();
-            break;
-        case ']':
-            if (x.empty()) return 0;
-            if (x.top() != '[') return 0;
-            x.pop();
-            break;
-        case '}':
-            if (x.empty()) return 0;
-            if (x.top() != '{') return 0;
-            x.pop();
-            break;
-        default:
-            x.push(S[i]);
-            break;
-        }
-    }
+	for (size_t i = 0; i < S.length(); ++i)
+	{
+		switch (S[i]) {
+		case ')':
+			if (x.empty()) return 0;
+			if (x.top() != '(') return 0;
+			x.pop();
+			break;
+		case ']':
+			if (x.empty()) return 0;
+			if (x.top() != '[') return 0;
+			x.pop();
+			break;
+		case '}':
+			if (x.empty()) return 0;
+			if (x.top() != '{') return 0;
+			x.pop();
+			break;
+		default:
+			x.push(S[i]);
+			break;
+		}
+	}
 
-    if (x.size() > 0) return 0;
+	if (x.empty()) return 1;
 
-    return 1;
+	return 0;
 }
 
 
 // EASY
 // Fish
-// N voracious fish are moving along a river.Calculate how many fish are alive.
-
+// N voracious fish are moving along a river. Calculate how many fish are alive.
 // TODO
+int voracious_fish_solution(std::vector<int>& A, std::vector<int>& B) {
+	// B
+	// 0 represents a fish flowing upstream,
+	// 1 represents a fish flowing downstream.
+	return -1;
+}
+
 
 // EASY
 // Nesting
 // Determine whether a given string of parentheses(single type) is properly nested.
-int neting_solution(string& S) {
-    if (S.length() == 0) return 1;
-    if (S.length() % 2 != 0) return 0;
+int neting_solution(std::string& S) {
+	if (S.length() == 0) return 1;
+	if (S.length() % 2 != 0) return 0;
 
-    stack<char> x;
+	std::stack<char> x;
 
-    for (size_t i = 0; i < S.length(); ++i)
-    {
-        if (S[i] == ')') {
-            if (x.empty()) return 0;
-            if (x.top() != '(')  return 0;
-            x.pop();
-        }
-        else {
-            x.push(S[i]);
-        }
-    }
+	std::for_each(S.begin(), S.end(), [&x](char c)
+		{
+			if (c == ')') {
+				if (x.empty())		 return 0;
+				if (x.top() != '(')  return 0;
+				x.pop();
+			}
+			else {
+				x.push(c);
+			}
+		});
 
-    if (x.empty()) return 1;
+	if (x.empty()) return 1;
 
-    return 0;
+	return 0;
 }
 
 // EASY
 // StoneWall
 // Cover "Manhattan skyline" using the minimum number of rectangles.
-int stone_wall_solution(vector<int>& H) {
-    stack<int> s;
-    int counter = 0;
-    int height = 0;
-    int currentHeight = 0;
-    for (size_t i = 0; i < H.size(); ++i)
-    {
-        currentHeight = H[i];
+int stone_wall_solution(std::vector<int>& H) {
+	std::stack<int> s;
+	int counter = 0;
+	int height = 0;
+	int currentHeight = 0;
 
-        if (s.empty()) {
-            s.push(currentHeight);
+	auto addCurrentHeight = [&]() {
+		s.push(currentHeight);
 
-            ++counter;
-            height += currentHeight;
-        }
-        else
-        {
-            if (height == currentHeight)
-            {
-                // do nothing
-            }
-            else if (height < currentHeight)
-            {
-                int diff = currentHeight - height;
-                ++counter;
-                s.push(diff);
-                height += diff;
-            }
-            else // height > currentHeight
-            {
-                while (height > currentHeight)
-                {
-                    int toRemove = s.top();
-                    s.pop(); // remove first element
-                    height -= toRemove;
-                }
-                if (height < currentHeight)
-                {
-                    int diff = currentHeight - height;
-                    ++counter;
-                    height += diff;
-                    s.push(diff);
-                }
+		++counter;
+		height += currentHeight;
+		};
 
-            }
-        }
-    }
-    return counter;
+	auto increaseHeigh = [&](){
+			while (height > currentHeight)
+			{
+				int toRemove = s.top();
+				s.pop(); // remove first element
+				height -= toRemove;
+			}
+			if (height < currentHeight)
+			{
+				int diff = currentHeight - height;
+				++counter;
+				height += diff;
+				s.push(diff);
+			}
+		};
+
+	auto decreaseHeight = [&](){
+			int diff = currentHeight - height;
+			++counter;
+			s.push(diff);
+			height += diff;
+		};
+
+	std::for_each(H.begin(), H.end(), [&](int h) {
+		currentHeight = h;
+
+		if (s.empty()) {
+			addCurrentHeight();
+		}
+		else {
+			if (height > currentHeight) {
+				increaseHeigh();
+			}
+			else if (height < currentHeight) {
+				decreaseHeight();
+			}
+		}
+		});
+
+	return counter;
 }

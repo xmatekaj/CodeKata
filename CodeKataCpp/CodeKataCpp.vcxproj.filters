@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Codility">
       <UniqueIdentifier>{0d39eaad-78cf-424a-b9f9-d3f9200274e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Codility">
+      <UniqueIdentifier>{4cd5b1e3-df56-4701-ae07-e4aa01afb4ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CodeKataCpp.cpp">
@@ -39,8 +42,28 @@
     <ClCompile Include="Codility\Codility_L7_Stacks_and_Queues.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L8_Leader.cpp">
+    <ClCompile Include="Codility\Codility_L2_Arrays.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
+    <ClCompile Include="Codility.cpp">
+      <Filter>Source Files\Codility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Codility_L5_Prefix_Sums.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
+    <ClInclude Include="Codility_L4_Counting_Elements.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
+    <ClInclude Include="Codility_L3_Time_Complexity.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
+    <ClInclude Include="Codility_L2_Arrays.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
+    <ClInclude Include="Codility.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

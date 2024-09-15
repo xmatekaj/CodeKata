@@ -1,5 +1,4 @@
-#include <vector>
-#include <algorithm>
+#include "../Codility_L3_Time_Complexity.h"
 
 // https://app.codility.com/programmers/lessons/3-time_complexity/
 
@@ -24,7 +23,7 @@ int frogjmp_solution(int X, int Y, int D) {
 // Find the missing element in a given permutation.
 int permmissingelem_solution(std::vector<int>& A)
 {
-    int last_element = int(A.size() + 1);
+    int last_element = static_cast<int>(A.size() + 1);
     long expected_sum = (last_element * (last_element + 1)) / 2;
     long sum = 0;
 	std::for_each(A.begin(), A.end(), [&sum](int x) { sum += x; });

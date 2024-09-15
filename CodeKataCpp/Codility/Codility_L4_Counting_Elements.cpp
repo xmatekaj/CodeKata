@@ -1,8 +1,6 @@
-// https://app.codility.com/programmers/lessons/4-counting_elements/
+#include "../Codility_L4_Counting_Elements.h"
 
-#include <unordered_set>
-#include <vector>
-#include <algorithm>
+// https://app.codility.com/programmers/lessons/4-counting_elements/
 
 // EASY
 // FrogRiverOne
