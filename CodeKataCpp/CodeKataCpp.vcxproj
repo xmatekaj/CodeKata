@@ -128,21 +128,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CodeKataCpp.cpp" />
-    <ClCompile Include="Codility.cpp" />
+    <ClCompile Include="Codility\Codility.cpp" />
     <ClCompile Include="Codility\Codility_E1_2015_Contest.cpp" />
-    <ClCompile Include="Codility\Codility_L2_Arrays.cpp" />
-    <ClCompile Include="Codility\Codility_L3_Time_Complexity.cpp" />
-    <ClCompile Include="Codility\Codility_L4_Counting_Elements.cpp" />
-    <ClCompile Include="Codility\Codility_L5_Prefix_Sums.cpp" />
-    <ClCompile Include="Codility\Codility_L6_Sorting.cpp" />
-    <ClCompile Include="Codility\Codility_L7_Stacks_and_Queues.cpp" />
+    <ClCompile Include="Codility\L2_Arrays.cpp" />
+    <ClCompile Include="Codility\L3_TimeComplexity.cpp" />
+    <ClCompile Include="Codility\L4_Counting_Elements.cpp" />
+    <ClCompile Include="Codility\L5_Prefix_Sums.cpp" />
+    <ClCompile Include="Codility\L6_Sorting.cpp" />
+    <ClCompile Include="Codility\L7_Stacks_and_Queues.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Codility.h" />
-    <ClInclude Include="Codility_L2_Arrays.h" />
-    <ClInclude Include="Codility_L3_Time_Complexity.h" />
-    <ClInclude Include="Codility_L4_Counting_Elements.h" />
-    <ClInclude Include="Codility_L5_Prefix_Sums.h" />
+    <ClInclude Include="Codility\Codility.h" />
+    <ClInclude Include="Codility\L2_Arrays.h" />
+    <ClInclude Include="Codility\L3_TimeComplexity.h" />
+    <ClInclude Include="Codility\L4_Counting_Elements.h" />
+    <ClInclude Include="Codility\L5_Prefix_Sums.h" />
+    <ClInclude Include="Codility\L7_Stacks_and_Queues.h" />
+    <ClInclude Include="Codility\L6_Sorting.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,42 +27,48 @@
     <ClCompile Include="Codility\Codility_E1_2015_Contest.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L3_Time_Complexity.cpp">
+    <ClCompile Include="Codility\L3_TimeComplexity.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L4_Counting_Elements.cpp">
+    <ClCompile Include="Codility\L4_Counting_Elements.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L5_Prefix_Sums.cpp">
+    <ClCompile Include="Codility\L5_Prefix_Sums.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L6_Sorting.cpp">
+    <ClCompile Include="Codility\L6_Sorting.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L7_Stacks_and_Queues.cpp">
+    <ClCompile Include="Codility\L7_Stacks_and_Queues.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility\Codility_L2_Arrays.cpp">
+    <ClCompile Include="Codility\L2_Arrays.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
-    <ClCompile Include="Codility.cpp">
+    <ClCompile Include="Codility\Codility.cpp">
       <Filter>Source Files\Codility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Codility_L5_Prefix_Sums.h">
+    <ClInclude Include="Codility\Codility.h">
       <Filter>Header Files\Codility</Filter>
     </ClInclude>
-    <ClInclude Include="Codility_L4_Counting_Elements.h">
+    <ClInclude Include="Codility\L2_Arrays.h">
       <Filter>Header Files\Codility</Filter>
     </ClInclude>
-    <ClInclude Include="Codility_L3_Time_Complexity.h">
+    <ClInclude Include="Codility\L3_TimeComplexity.h">
       <Filter>Header Files\Codility</Filter>
     </ClInclude>
-    <ClInclude Include="Codility_L2_Arrays.h">
+    <ClInclude Include="Codility\L4_Counting_Elements.h">
       <Filter>Header Files\Codility</Filter>
     </ClInclude>
-    <ClInclude Include="Codility.h">
+    <ClInclude Include="Codility\L5_Prefix_Sums.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
+    <ClInclude Include="Codility\L7_Stacks_and_Queues.h">
+      <Filter>Header Files\Codility</Filter>
+    </ClInclude>
+    <ClInclude Include="L6_Sorting.h">
       <Filter>Header Files\Codility</Filter>
     </ClInclude>
   </ItemGroup>
