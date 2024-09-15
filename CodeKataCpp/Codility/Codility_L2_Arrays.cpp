@@ -1,4 +1,4 @@
-#include "../Codility_L2_Arrays.h"
+#include "Codility_L2_Arrays.h"
 
 // https://app.codility.com/programmers/lessons/2-arrays/
 

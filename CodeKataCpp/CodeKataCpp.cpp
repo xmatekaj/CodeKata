@@ -2,9 +2,10 @@
 #include <string>
 #include <vector>
 
-#include "Codility.h"
+#include "Codility/Codility.h"
 
 int main()
+{
 
     Codility::runCodilityTests();
 
