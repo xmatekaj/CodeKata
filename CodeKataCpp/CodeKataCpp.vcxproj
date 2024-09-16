@@ -130,6 +130,7 @@
     <ClCompile Include="CodeKataCpp.cpp" />
     <ClCompile Include="Codility\Codility.cpp" />
     <ClCompile Include="Codility\Codility_E1_2015_Contest.cpp" />
+    <ClCompile Include="Codility\L8_Leader.cpp" />
     <ClCompile Include="Codility\L2_Arrays.cpp" />
     <ClCompile Include="Codility\L3_TimeComplexity.cpp" />
     <ClCompile Include="Codility\L4_Counting_Elements.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="Codility\L5_Prefix_Sums.h" />
     <ClInclude Include="Codility\L7_Stacks_and_Queues.h" />
     <ClInclude Include="Codility\L6_Sorting.h" />
+    <ClInclude Include="Codility\L8_Leader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
