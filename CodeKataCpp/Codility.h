@@ -1,6 +1,6 @@
 #pragma once
 
-#include "L5_Prefix_Sums.h"
+#include "CodilityLessons.h"
 
 namespace Codility {
 
